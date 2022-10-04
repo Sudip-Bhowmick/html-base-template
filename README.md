@@ -1,3 +1,1 @@
-#Template URL
-
-https://html-base-template.web.app/
+Template URL: https://html-base-template.web.app/
