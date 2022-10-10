@@ -3,41 +3,54 @@
     --fontone: 'Open Sans';
     --headerheight: 100px;
     --colorone: #000;
-}
-@media(min-width: 1441px){
-    :root{
-        --container: 1400px;
+
+    --container_width: 100%;
+    --container_padding: 15px;
+    @media (min-width: 768px) and (max-width: 991px) {
+      --container_width: 760px;
     }
-}
-@media(max-width: 1440px) and (min-width: 1367px){
-    :root{
-        --container: 1300px;
+    @media (min-width: 992px) and (max-width: 1199px) {
+      --container_width: 1000px;
     }
-}
-@media(max-width: 1366px) and (min-width: 1200px){
-    :root{
-        --container: 1170px;
+    @media (min-width: 1200px) {
+      --container_width: 1190px;
     }
-}
-@media(max-width: 1199px) and (min-width: 1025px){
-    :root{
-        --container: 1000px;
+    @media (min-width: 1400px) {
+      --container_width: 1190px;
     }
+    --container_left_space: calc((100% - var(--container_width)) / 2);
 }
-@media(max-width: 1024px) and (min-width: 992px){
-    :root{
-        --container: 960px;
-    }
+
+// containers
+.container {
+    width: var(--container_width);
+    padding-inline: var(--container_padding);
+    margin: auto;
+    box-sizing: border-box;
 }
-@media(max-width: 991px) and (min-width: 768px){
-    :root{
-        --container: 750px;
-    }
+.container-left {
+    margin-left: calc(var(--container_left_space));
+    padding-left: var(--container_padding);
+    box-sizing: border-box;
 }
-@media(max-width: 767px){
-    :root{
-        --container: 100%;
-    }
+.container-right {
+    margin-right: calc(var(--container_left_space));
+    padding-right: var(--container_padding);
+    box-sizing: border-box;
+}
+
+// text aligns
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-justify{
+    text-align: justify;
 }
 
 /* header */
@@ -248,12 +261,6 @@ body{
     width: 100%;
 }
 
-.container{
-    max-width: var(--container);
-    width: 100%;
-    margin: auto;
-    padding: 0 10px;
-}
 .padding{
     padding: 0px 10px;
 }
