@@ -349,17 +349,6 @@ p {
   overflow: hidden;
 }
 
-/* fonts */
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/OpenSans-Regular.ttf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/OpenSans-SemiBold.ttf);
-  font-weight: 500;
-}
 /* banner */
 .bannerslider {
   overflow-x: clip;
