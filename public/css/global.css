@@ -1,6 +1,6 @@
 /* variables */
 :root {
-  --fontone: "Open Sans";
+  --primaryfont: "Open Sans";
   --headerheight: 100px;
   --colorone: #000;
   --container_width: 100%;
@@ -26,6 +26,10 @@
   :root {
     --container_width: 1190px;
   }
+}
+
+* {
+  font-family: var(--primaryfont);
 }
 
 .container {
@@ -272,7 +276,7 @@ h6 {
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: var(--fontone);
+  font-family: var(--primaryfont);
 }
 
 * {
@@ -352,4 +356,64 @@ p {
 /* banner */
 .bannerslider {
   overflow-x: clip;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 15px;
+  margin: 60px 0;
+}
+
+.grid a {
+  border: 1px solid grey;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
+  color: #000;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.getcode {
+  background: green;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.getcoderesult {
+  background: #545151;
+  border-radius: 5px;
+  padding: 20px 40px 20px 20px;
+}
+
+.getcoderesult * {
+  color: #fff;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.copyclass {
+  position: relative;
+}
+
+img.copyimg {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
 }/*# sourceMappingURL=global.css.map */

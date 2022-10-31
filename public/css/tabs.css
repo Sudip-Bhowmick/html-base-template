@@ -1,0 +1,24 @@
+.tab-titles {
+    display: flex;
+    gap: 10px;
+}
+
+.tab-titles .tab-title {
+    padding: 12px 24px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.tab-titles.left{
+    justify-content: flex-start;
+}
+.tab-titles.center{
+    justify-content: center;
+}
+.tab-titles.right{
+    justify-content: flex-end;
+}
+
+.tab-contents .tab-content{
+    display: none;
+}

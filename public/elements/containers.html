@@ -7,44 +7,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Containers</title>
     <link rel="stylesheet" href="../css/global.css">
+    <style>
+        main {
+            margin: 60px 0;
+        }
+    </style>
 </head>
 
 <body>
-    <h4 class="text-center">Normal container</h4>
-    <div class="container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio illo repudiandae aliquam, totam
-            explicabo modi nostrum expedita impedit consectetur. Ab odio iusto nemo consequuntur dolores impedit
-            vel,
-            omnis vero! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio illo repudiandae
-            aliquam,
-            totam explicabo modi nostrum expedita impedit consectetur. Ab odio iusto nemo consequuntur dolores
-            impedit
-            vel, omnis vero!</p>
-    </div>
+    <main>
+        <!-- Normal container -->
+        <div class="code">
+            <div class="container">
+                <h4 class="text-left">Normal container</h4>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio illo
+                    repudiandae aliquam, totam explicabo modi nostrum expedita impedit consectetur. Ab odio iusto nemo
+                    consequuntur dolores impedit vel, omnis vero! Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Quis optio illo repudiandae aliquam, totam explicabo modi nostrum expedita impedit
+                    consectetur. Ab odio iusto nemo consequuntur dolores impedit vel, omnis vero!</p>
+            </div>
+        </div>
 
-    <h4 class="text-center">Left space container</h4>
-    <div class="container-left">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio illo repudiandae aliquam, totam
-            explicabo modi nostrum expedita impedit consectetur. Ab odio iusto nemo consequuntur dolores impedit
-            vel,
-            omnis vero! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio illo repudiandae
-            aliquam,
-            totam explicabo modi nostrum expedita impedit consectetur. Ab odio iusto nemo consequuntur dolores
-            impedit
-            vel, omnis vero!</p>
-    </div>
+        <div class="container getcodecontainer">
+            <div class="getcode">Get code</div>
+            <div class="copyclass">
+                <img src="../img/copy.png" alt="copy" class="copyimg">
+                <div class="getcoderesult"></div>
+            </div>
+        </div>
 
-    <h4 class="text-center">Right space container</h4>
-    <div class="container-right">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio illo repudiandae aliquam, totam
-            explicabo modi nostrum expedita impedit consectetur. Ab odio iusto nemo consequuntur dolores impedit
-            vel,
-            omnis vero! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio illo repudiandae
-            aliquam,
-            totam explicabo modi nostrum expedita impedit consectetur. Ab odio iusto nemo consequuntur dolores
-            impedit
-            vel, omnis vero!</p>
-    </div>
+        <!-- Left space container -->
+        <div class="code">
+            <div class="container-left mt-40">
+                <h4 class="text-left">Left space container</h4>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio illo
+                    repudiandae aliquam, totam
+                    explicabo modi nostrum expedita impedit consectetur. Ab odio iusto nemo consequuntur dolores impedit
+                    vel,
+                    omnis vero! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio illo repudiandae
+                    aliquam,
+                    totam explicabo modi nostrum expedita impedit consectetur. Ab odio iusto nemo consequuntur dolores
+                    impedit
+                    vel, omnis vero!</p>
+            </div>
+        </div>
+
+        <div class="container getcodecontainer">
+            <div class="getcode">Get code</div>
+            <div class="copyclass">
+                <img src="../img/copy.png" alt="copy" class="copyimg">
+                <div class="getcoderesult"></div>
+            </div>
+        </div>
+
+        <!-- Right space container -->
+        <div class="code">
+            <div class="container-right mt-40">
+                <h4 class="text-right">Right space container</h4>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio illo
+                    repudiandae
+                    aliquam, totam
+                    explicabo modi nostrum expedita impedit consectetur. Ab odio iusto nemo consequuntur dolores impedit
+                    vel,
+                    omnis vero! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio illo repudiandae
+                    aliquam,
+                    totam explicabo modi nostrum expedita impedit consectetur. Ab odio iusto nemo consequuntur dolores
+                    impedit
+                    vel, omnis vero!</p>
+            </div>
+        </div>
+
+        <div class="container getcodecontainer">
+            <div class="getcode">Get code</div>
+            <div class="copyclass">
+                <img src="../img/copy.png" alt="copy" class="copyimg">
+                <div class="getcoderesult"></div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(".getcodecontainer").each(function (index) {
+            var getCode = $(this).prev('.code').html();
+            $(this).find('.getcoderesult').html('<xmp>' + getCode + '</xmp>');
+        });
+    </script>
+    <script src="../js/global.js"></script>
 </body>
 
 </html>
