@@ -27,12 +27,23 @@ $( ".hamburger" ).on( "click", function() {
 // });
 
 // copy text
-for (let i = 0; i < 10; i++) {
-    $( ".getcoderesult" ).each(function( index ) {
-        $(this).attr('id', i)
-        $('.copyimg').attr('onclick', 'CopyToClipboard(' + i + ')')
-    });
-}
+// for (let i = 0; i < 11; i++) {
+//     $( ".getcoderesult" ).each(function(index) {
+//         $(this).attr('id', i)
+//         $('.copyimg').attr('onclick', 'CopyToClipboard(' + i + ')')
+//         console.log(i)
+//     });
+// }
+
+var totalResultNum = $('.getcoderesult').length;
+
+$( ".getcoderesult" ).each(function(index) {
+  for (let i = 0; i < totalResultNum; i++) {
+    $(this).attr('id', i)
+    $('.copyimg').attr('onclick', 'CopyToClipboard(' + i + ')')
+    console.log(i)
+  }
+});
 
 function CopyToClipboard(containerid) {
   if (document.selection) {
